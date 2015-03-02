@@ -46,7 +46,6 @@ var btn = {
 			element.css('background-color', map.bgcolor);	
 
 			map = {};
-
 		}
 	}
 
@@ -54,30 +53,39 @@ var btn = {
 menu = {
 
 	start: function(){		
+		//map of opened menus
+		var map = [];		
 
-		var map = {};
-
-		$('.menu li').mouseenter(function(){
-
+	
+		$('.menu > li').mouseenter(function(){	
 			
+			//if some another menu is opened, hide but last			
+			while (map.length > 1){
+
+				map.shift().element.hide();
+			}
+
+			//positioning the menu in right position
 			$(this).children('ul').css('left', $(this).position().left );
 			$(this).children('ul').show();
 
-			map = {
-				element:$(this)
-			};
-		});
+			//adding to map
+			map.push({
+				element:$(this).children('ul')
+			});			
 
-		$('.menu li ul').mouseleave(function(){
+		});
+		
+		//if out of body of menu, hide it
+		$('.menu li ul').mouseleave(function(){	
 			$(this).hide();
 		});
 	}
 
-
 };
 
 $(document).ready(function(){
-	
+	//start of objects
 	btn.start();
 	menu.start();
 });
