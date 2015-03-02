@@ -60,7 +60,7 @@ menu = {
 		$('.menu > li').mouseenter(function(){	
 			
 			//if some another menu is opened, hide but last			
-			while (map.length > 1){
+			while (map.length > 0){
 
 				map.shift().element.hide();
 			}
