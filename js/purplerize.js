@@ -15,7 +15,8 @@ var btn = {
 	start : function(){
 
 		var map = {},
-				invert_color = this.invert_color;
+			invert_color = this.invert_color;/*this recognize the function 
+				inside start function*/
 
 		$('a[class*=btn]').mouseenter(function(){
 			change_color($(this));
@@ -34,7 +35,8 @@ var btn = {
 				bgcolor:element.css("background-color")
 			};			
 
-			element.attr('style', 'background-color: '+ invert_color(map.bgcolor) +
+			element.attr('style', 'background-color: '+ 
+				invert_color(map.bgcolor) +
 				' !important; color: '+ invert_color(map.color)+ ' !important');
 
 		}
@@ -49,39 +51,53 @@ var btn = {
 		}
 	}
 
-},
-menu = {
+	},
+	menu = {
 
-	start: function(){		
-		//map of opened menus
-		var map = [];		
-
-	
-		$('.menu > li').mouseenter(function(){	
-			
-			//if some another menu is opened, hide but last			
-			while (map.length > 0){
-
-				map.shift().element.hide();
-			}
-
-			//positioning the menu in right position
-			$(this).children('ul').css('left', $(this).position().left );
-			$(this).children('ul').show();
-
-			//adding to map
-			map.push({
-				element:$(this).children('ul')
-			});			
-
-		});
+		start: function(){		
+			//map of opened menus
+			var map = [],
+				submenu_map = [];		
 		
-		//if out of body of menu, hide it
-		$('.menu li ul').mouseleave(function(){	
-			$(this).hide();
-		});
-	}
+			$('.menu > li').click(function(){
+				
+				//if some another menu is opened, hide but last			
+				while (map.length > 0){
+					map.shift().element.hide();
+				}
 
+				//positioning the menu in right position
+				$(this).children('ul').css('left', $(this).position().left );
+				$(this).children('ul').show();
+				
+				//adding to map			
+				map.push({
+					element:$(this).children('ul')
+				});						
+
+			});
+			
+			//if out of body of menu, hide it
+			$('.menu li ul').mouseleave(function(){	
+				map = [];
+				$(this).hide();
+
+				//hide submenus
+				$('.sub').hide();
+			});	
+
+			//submenus
+			$('.sub').parent().click(function(){				
+
+				var x = "100%",
+					y = $(this).position().top;
+				
+				$(this).children('ul').css('left', x );
+				$(this).children('ul').css('top', y );
+				$(this).children('ul').show();				
+
+			});		
+		}
 };
 
 $(document).ready(function(){
