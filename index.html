@@ -2,54 +2,237 @@
 <html>
 	<head>
 		<meta charset='utf-8' />
-		<title>Purplerize Framework</title>
-		
+		<title>Purplerize Framework</title>		
 		
 		<script type="text/javascript" src="js/jquery.js"></script> 
 		<script type="text/javascript" src="jquery-ui/jquery-ui.min.js"></script>		
 		<script type="text/javascript" src="js/purplerize.js"></script>
 		
-		<link rel="stylesheet" type="text/css" href="jquery-ui/jquery-ui.min.css" />
-		<link rel="stylesheet" type="text/css" href="css/purplerize.css" />
-		
+		<link rel="stylesheet" type="text/css" 
+			href="jquery-ui/jquery-ui.min.css" />
+		<link rel="stylesheet" type="text/css" 
+			href="font-awesome/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/purplerize.css" />		
 
 	</head>
 
-	<body>
-		
+	<body>	
+		<div class='box c'>
 
-		<div class='box'>
-			<div class='row'>
+			<h1>Purplerize Web Framework</h1>
+
+			<h2>Organization</h2>
+
+			<h3>Boxes, rows and cols</h3>
+
+			<div class='box blue l3 c'>
+				<div class='row'>Blue box</div>
+				<div class='row yellow l4'>
+
+					<div class='col w4 green d3'>This is a col inside a yellow row</div>
+					<div class='col w4 black white-t'>Another col with color text</div>
+				</div>
+
+				<div class='row yellow l4'>Another row</div>
+
+				<div class='row yellow l4'>
+					<div class='col w3 o3 green d3'>Look the offset</div>
+				</div>
+			</div>	
+
+			<h2>Alignment</h2>
+			<h3>Center, left and right</h3>
+
+			<div class='box blue l3 c'>
+				<div class='row green d3 c'> Row center</div>
+				<div class='row green d3 l'>Row left</div>
+				<div class='row green d3 r'>Row right</div>
+			</div>	
+
+			<h2>Menu</h2>
+			<br />
+			<h3>Click in items with arrows to see submenus</h3>
+			<br />
+			<div class='box'>
 				<nav class='menu'>
 					<a href="#">Home</a>
-					<a href="#">FAQ</a>
-					<li>Test
+					<a href="#">Office</a>
+					<a href="#">Market</a>
+					<li>Submenu <i class='fa fa-caret-down'></i>
 
 						<ul class='drop'>
-							<li><a href="#">Item1</a></li>
-							<li><a href="#">Item2</a></li>
-							<li><a href="#">Item3</a></li>
-							<li><a href="#">Item4</a></li>
-						</ul>
-					</li>
-					<li>Bingo
+							<li><a href="#">Gym</a></li>
+							<li><a href="#">Clothes</a></li>
+							<li><a href="#">Bar</a></li>
+							<li>another submenu <i class='fa fa-caret-right'></i>
 
-						<ul class='drop'>
-							<li><a href="#">Item1</a></li>
-							<li><a href="#">Item2</a></li>
-							<li><a href="#">Item3</a></li>
-							<li><a href="#">Item4</a></li>
-						</ul>
-					</li>
+								<ul class='sub'>
+									<li><a href="#">School</a></li>
+									<li><a href="#">Hotdog</a></li>
+									<li><a href="#">Grapes</a></li>
+									<li><a href="#">Popcorn</a></li>								
+								</ul>	
+							
+							</li>
 
-					<a href="#">Help</a>
+						</ul>	
+					</li>
 				</nav>	
 
 			</div>
+			<br />
+			<br />
 
+			<h2>Buttons</h2>
+			<h3>They invert the colors when you pass the mouse over</h3>
 
-		</div>
+			<div class='box blue l3 c'>
+				<div class='row yellow l4 c'>
+					<a href="#" class='btn'>A Button</a>
+					<a href="#" class='btn'>Another</a>
+					<a href="#" class='btn yellow l4 black-t'>Grape</a>
+				</div>				
+			</div>
+			
+			<h2>Colors</h2>
+			<div class='box'>
+				<h3>Red</h3>
+				<div class='row fat-v c'>
+					<div class='col w1 red l1'>l1</div>
+					<div class='col w1 red l2'>l2</div>
+					<div class='col w1 red l3'>l3</div>
+					<div class='col w1 red l4'>l4</div>
+					<div class='col w1 red l5'>l5</div>
+					<div class='col w1 red d1 white-t'>d1</div>
+					<div class='col w1 red d2 white-t'>d2</div>
+					<div class='col w1 red d3 white-t'>d3</div>
+					<div class='col w1 red d4 white-t'>d4</div>
+					<div class='col w1 red d5 white-t'>d5</div>
+				</div>
+
+				<h3>Green</h3>
+				<div class='row fat-v c'>
+					<div class='col w1 green l1'>l1</div>
+					<div class='col w1 green l2'>l2</div>
+					<div class='col w1 green l3'>l3</div>
+					<div class='col w1 green l4'>l4</div>
+					<div class='col w1 green l5'>l5</div>
+					<div class='col w1 green d1 white-t'>d1</div>
+					<div class='col w1 green d2 white-t'>d2</div>
+					<div class='col w1 green d3 white-t'>d3</div>
+					<div class='col w1 green d4 white-t'>d4</div>
+					<div class='col w1 green d5 white-t'>d5</div>
+				</div>
+
+				<h3>Blue</h3>
+				<div class='row fat-v c'>
+					<div class='col w1 blue l1'>l1</div>
+					<div class='col w1 blue l2'>l2</div>
+					<div class='col w1 blue l3'>l3</div>
+					<div class='col w1 blue l4'>l4</div>
+					<div class='col w1 blue l5'>l5</div>
+					<div class='col w1 blue d1 white-t'>d1</div>
+					<div class='col w1 blue d2 white-t'>d2</div>
+					<div class='col w1 blue d3 white-t'>d3</div>
+					<div class='col w1 blue d4 white-t'>d4</div>
+					<div class='col w1 blue d5 white-t'>d5</div>
+				</div>
+
+				<h3>Yellow</h3>
+				<div class='row fat-v c'>
+					<div class='col w1 yellow l1'>l1</div>
+					<div class='col w1 yellow l2'>l2</div>
+					<div class='col w1 yellow l3'>l3</div>
+					<div class='col w1 yellow l4'>l4</div>
+					<div class='col w1 yellow l5'>l5</div>
+					<div class='col w1 yellow d1 white-t'>d1</div>
+					<div class='col w1 yellow d2 white-t'>d2</div>
+					<div class='col w1 yellow d3 white-t'>d3</div>
+					<div class='col w1 yellow d4 white-t'>d4</div>
+					<div class='col w1 yellow d5 white-t'>d5</div>
+				</div>
+
+				<h3>Magenta</h3>
+				<div class='row fat-v c'>
+					<div class='col w1 magenta l1'>l1</div>
+					<div class='col w1 magenta l2'>l2</div>
+					<div class='col w1 magenta l3'>l3</div>
+					<div class='col w1 magenta l4'>l4</div>
+					<div class='col w1 magenta l5'>l5</div>
+					<div class='col w1 magenta d1 white-t'>d1</div>
+					<div class='col w1 magenta d2 white-t'>d2</div>
+					<div class='col w1 magenta d3 white-t'>d3</div>
+					<div class='col w1 magenta d4 white-t'>d4</div>
+					<div class='col w1 magenta d5 white-t'>d5</div>
+				</div>
+
+				<h3>Cyan</h3>
+				<div class='row fat-v c'>
+					<div class='col w1 cyan l1'>l1</div>
+					<div class='col w1 cyan l2'>l2</div>
+					<div class='col w1 cyan l3'>l3</div>
+					<div class='col w1 cyan l4'>l4</div>
+					<div class='col w1 cyan l5'>l5</div>
+					<div class='col w1 cyan d1 white-t'>d1</div>
+					<div class='col w1 cyan d2 white-t'>d2</div>
+					<div class='col w1 cyan d3 white-t'>d3</div>
+					<div class='col w1 cyan d4 white-t'>d4</div>
+					<div class='col w1 cyan d5 white-t'>d5</div>
+				</div>
+
+				<h3>White</h3>
+				<div class='row fat-v c'>
+					<div class='col w1 white l1'>l1</div>
+					<div class='col w1 white l2'>l2</div>
+					<div class='col w1 white l3'>l3</div>
+					<div class='col w1 white l4'>l4</div>
+					<div class='col w1 white l5'>l5</div>
+					<div class='col w1 white d1 white-t'>d1</div>
+					<div class='col w1 white d2 white-t'>d2</div>
+					<div class='col w1 white d3 white-t'>d3</div>
+					<div class='col w1 white d4 white-t'>d4</div>
+					<div class='col w1 white d5 white-t'>d5</div>
+				</div>
+
+			</div>
+
+			<h2>Form</h2>
+			<div class='box c blue l4 soft'>
+				<form action="#">
+					
+					<div class='row'>
+						<div class='col w3 o1'>
+							<label for='name'>Name</label>
+							<input type='text' id='name' maxlength='10' />
+						</div>
+
+						<div class='col w3 o1'>
+							<label for='n'>Last name</label>
+							<input type='text' id='last' maxlength='10' />
+						</div>
+					
+					</div>
+
+					<div class='row'>
+						<div class='col w7 o1'>
+							<label for='email'>E-mail</label>
+							<input type='text' id='email' maxlength='50' />
+						</div>								
+					</div>
+
+					<div class='row'>
+						<div class='col w3 o1'>
+							<label for='pass'>Password</label>
+							<input type='password' id='pass' maxlength='10'/>
+						</div>	
+						<div class='col w3 o1'>
+							<label for='confirm'>Confirm Password</label>
+							<input type='password' id='confirm' maxlength='10'/>
+						</div>								
+					</div>
+				</form>
+
+			</div>
+		</div>			
 	</body>
-
 </html>
-
